@@ -5,6 +5,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Static Comp 3</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,600,700,800" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
   integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
   <link href="css/normalize.css" type="text/css" rel="stylesheet">
@@ -27,37 +28,37 @@
       <input type="search" placeholder="Search for a job, task or resume">
     </span>
     <span class="search-icons">
-      <i class="fas fa-user-friends"></i>
-      <i class="fas fa-calendar"></i>
-      <i class="fas fa-th"></i>
+      <div><i class="fas fa-user-friends "></i></div>
+      <div><i class="fas fa-calendar"></i></div>
+      <div><i class="fas fa-th"></i></div>
     </span>
   </header>
     <nav class="l-nav menu-wrap">
+      <h2>Ahmad Kayyali</h2>
       <div class="menu-sidebar">
-        <h3>Main</h3>
         <ul class="menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Jobs</a></li>
-          <li><a href="#">Resumes</a></li>
-          <li><a href="#">Tasks</a></li>
-          <li><a href="#">Calendar</a></li>
+          <li class="myButton"><a href="#">Home</a></li>
+          <li class="myButton"><a href="#">Jobs</a></li>
+          <li class="myButton"><a href="#">Resumes</a></li>
+          <li class="myButton"><a href="#">Tasks</a></li>
+          <li class="myButton"><a href="#">Calendar</a></li>
         </ul>
         <hr class="menu-hr">
         <h3>Admin</h3>
         <ul class="menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Jobs</a></li>
-          <li><a href="#">Resumes</a></li>
-          <li><a href="#">Tasks</a></li>
-          <li><a href="#">Calendar</a></li>
+          <li class="myButton"><a href="#">Home</a></li>
+          <li class="myButton"><a href="#">Jobs</a></li>
+          <li class="myButton"><a href="#">Resumes</a></li>
+          <li class="myButton"><a href="#">Tasks</a></li>
+          <li class="myButton"><a href="#">Calendar</a></li>
         </ul>
         <hr class="menu-hr">
         <h3>Categories</h3>
         <ul class="menu">
-          <li><a href="#">Administrative</a></li>
-          <li><a href="#">Design</a></li>
-          <li><a href="#">Executive</a></li>
-          <li><a href="#">Human Resources</a></li>
+          <li class="myButton"><a href="#">Administrative</a></li>
+          <li class="myButton"><a href="#">Design</a></li>
+          <li class="myButton"><a href="#">Executive</a></li>
+          <li class="myButton"><a href="#">Human Resources</a></li>
         </ul>
       </div>
     </nav>
@@ -72,11 +73,11 @@
         </div>
         <div class="actions">
           <button type="button" name="button" class="btn btn-text"><i class="fas fa-circle"></i> Open</button>
-          <button type="button" name="button" class="btn-circle"><i class="fas fa-bookmark"></i></button>
-          <button type="button" name="button" class="btn-circle"><i class="fas fa-pen"></i></button>
-          <button type="button" name="button" class="btn-circle"><i class="fas fa-trash"></i></button>
+          <button type="button" name="button" class="btn btn-circle"><i class="fas fa-bookmark"></i></button>
+          <button type="button" name="button" class="btn btn-circle"><i class="fas fa-pen"></i></button>
+          <button type="button" name="button" class="btn btn-circle"><i class="fas fa-trash"></i></button>
         </div>
-        <div role="menubar" class="hot-links">
+        <div role="menubar" class="hot-links hide-for-tablet">
           <a href="#">Summary</a>
           <a href="#">Applicants</a>
           <a href="#">Job Board</a>
@@ -85,8 +86,15 @@
           <a href="#">Broadcast</a>
           <a href="#">Notifications</a>
         </div>
+        <div role="menubar" class="hot-links hide-for-desktop">
+          <div class="opacity"><i class="fas fa-caret-left"></i></div>
+          <div class="opacity"><a href="#">Job Board</a></div>
+          <div class="active-btn"><a href="#">Summary</a></div>
+          <div class="opacity"><a href="#">Applicants</a></div>
+          <div class="opacity"><i class="fas fa-caret-right"></i></div>
+        </div>
       </div>
-      <article class="m-summary">
+      <article class="l-summary">
         <section class="data">
           <div class="circles">
             <svg viewbox="0 0 36 36" class="circular-chart">

@@ -6,21 +6,29 @@
   padding: 0;
 }
 
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
 button:hover {
   cursor: pointer;
 }
 
-.btn-circle {
-  border: 1px solid rgba(142, 142, 142, .4);
-  border-radius: 50%;
-  height: 30px;
-  padding: 3px;
-  width: 30px;
+.btn {
+  border: 2px solid #FFF;
+  background-color: #AD974F;
 }
 
-.btn-circle i {
-  font-size: 12px;
-  opacity: .7;
+.hide-for-desktop {
+  display: none;
 }
 
 /* ------------ LAYOUT --------------- */
@@ -39,7 +47,7 @@ button:hover {
 }
 
 .l-header {
-  border: 3px solid red;
+  background-color: #040404;
   display: grid;
   grid-template-columns: 100px 1fr 300px;
   height: 100px;
@@ -55,12 +63,9 @@ button:hover {
   grid-template-rows: 1fr 10fr;
 }
 
-
-
-
-
-
-
+.l-summary {
+  width: 100vw;
+}
 
 /* ------------ MODULES --------------- */
 
@@ -72,14 +77,33 @@ button:hover {
 }
 
 .search-bar input {
+  background-color: #fff;
+  border: 2px solid #AD794E;
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: 600;
   height: 100%;
+  text-align: center;
   width: 100%;
 }
 
-.search-icons i {
-  font-size: 24px;
-  margin: auto;
+.search-bar input::placeholder {
+  color: #8E793E;
+  font-size: 1rem;
+  font-weight: 700;
+}
 
+.search-icons div {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-icons i {
+  color: #8E793E;
+  font-size: 34px;
+  transition: all .5s ease;
 }
 
    /* Menu toggle */
@@ -103,19 +127,19 @@ button:hover {
     transition: .5s;
   }
   .toggle-button .menu-bar-top {
-    border: 2px solid #555;
+    border: 2px solid #8E793E;
     border-bottom: none;
     top: 5px;
   }
   .toggle-button .menu-bar-middle {
     height: 2px;
-    background-color: #555;
+    background-color: #8E793E;
     margin-top: 4px;
     margin-bottom: 4px;
     top: 9px;
   }
   .toggle-button .menu-bar-bottom {
-    border: 2px solid #555;
+    border: 2px solid #8E793E;
     border-top: none;
     top: 22px;
   }
@@ -137,23 +161,53 @@ button:hover {
 /* Nav Menu */
 
 .menu-wrap {
-    background-color: #6968AB;
+    background-color: #040303;
+    color: #AD974F;
     position: fixed;
     top: 0;
     height: 100%;
     width: 280px;
     margin-left: -280px;
     font-size: 1em;
-    font-weight: 700;
+    font-weight: 500;
     overflow: auto;
     transition: .25s;
     z-index: 10;
 }
 
+.menu-wrap h2,
+.menu-wrap h3 {
+  margin: 10px;
+  text-align: center;
+  font-style: italic;
+}
+
 .menu-show {
     margin-left: 0;
-    box-shadow: 4px 2px 15px 1px #B9ADAD;
 }
+
+.menu-sidebar {
+  height: 100%;
+}
+
+.menu-sidebar ul {
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+  list-style: none;
+}
+
+.menu-sidebar li {
+  background-color: #171717;
+  color: #FFF;
+  height: 100%;
+  text-align: center;
+}
+
+ul.menu li{
+  padding-top: 20px;
+}
+
 
 .menu-sidebar li > a::after {
     content: "";
@@ -164,55 +218,141 @@ button:hover {
     width: 102%;
     left: 50%;
     transform: translate(-50%);
-    background-image: linear-gradient(to right, transparent 50.3%, #FFFA3B 50.3%);
+    background-color: #AD974F;
     transition: background-position .2s .1s ease-out;
     background-size: 200% auto;
 }
+
 .menu-sidebar li > a:hover::after {
     background-position: -100% 0;
 }
 
+/* normal button style */
+.myButton {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    color: #FFF;
+    position: relative;
+}
+/* button hover style if required */
+.myButton:hover {
+  cursor: pointer;
+  color: rgba(232, 179, 3, 0.43)
+}
+/* generated element for shine effect.
+ * normal state is semi-transparent
+ * white but with zero width. Set no
+ * transition here for no mouse-leave
+ * animations. Otherwise the effect
+ * will play in reverse when your mouse
+ * leaves the element
+ */
+.myButton:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(232, 179, 3, 1);
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+
+}
+/* on hover we animate the width to
+ * 100% and opacity to 0 so the element
+ * grows and fades out
+ */
+.myButton:hover:after {
+    width: 120%;
+    background-color: rgba(255,255,255,0);
+    -webkit-transition: all .7s ease-out;
+    -moz-transition: all .7s ease-out;
+    -ms-transition: all .7s ease-out;
+    -o-transition: all .7s ease-out;
+    transition: all .7s ease-out;
+}
+
+
+
 /* Banner */
 
 .actions {
-  border: 2px solid green;
+  border-left: 2px solid #AD974E;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .actions button {
+  color: #040404;
   margin: 1rem;
 }
 
+.btn-circle {
+  border-radius: 50%;
+  height: 40px;
+  padding: 3px;
+  width: 40px;
+}
+
+.btn-circle i {
+  font-size: 12px;
+  opacity: .7;
+}
+
+
 .btn-text {
   align-items: center;
-  border-radius: 10px;
+  border-radius: 20px;
   display: flex;
+  height: 40px;
   justify-content: center;
   text-transform: uppercase;
   padding: 5px;
   width: 80px;
+  font-size: 13px;
 }
 
 .btn-text i {
   font-size: 10px;
   margin-right: 3px;
+  color: #040404;
 }
 
 .hot-links {
-  align-items: flex-end;
-  border: 2px solid blue;
-  display: flex;
-  justify-content: flex-start;
+  text-align: center;
 }
 
 .hot-links a {
+  color: #AD794E;
   margin: 1rem;
+  padding: 25px 0;
+  position: relative;
+  top: 50px;
 }
 
-.m-banner .info {
-  border: 2px solid red;
+.hot-links i {
+  margin: 1rem 10px;
+}
+
+.hot-links i::before {
+  font-size: 20px;
+}
+
+.m-banner {
+  background-color: #040404;
+  border-top: 2px solid #AD794E;
+  color: white;
+}
+
+.info {
+
+  text-align: center;
 }
 
 .info p {
@@ -221,6 +361,7 @@ button:hover {
 }
 
 .info i {
+  color: #AD794E;
   margin: 0 5px;
 }
 
@@ -310,9 +451,9 @@ section.data button {
 }
 
 .graph img {
-  margin: 10px auto;
-  height: 250px;
-  width: 100%;
+  margin: 20px auto;
+  max-width: 80%;
+  max-height: 350px;
 }
 
 .percentage {
@@ -356,7 +497,7 @@ section.data button {
   display: grid;
   grid-template-columns: 3fr 1.5fr;
   grid-gap: 65px;
-  margin-top: 3rem;
+  margin: 3rem;
 }
 
 .job-details aside {
@@ -468,7 +609,52 @@ section.data button {
 
 /* ------------ STATE --------------- */
 
-@media only screen and (max-width: 1124px) {
+a:hover {
+  color: #AD794E;
+  font-weight: 500;
+}
+
+.actions button:hover {
+  color: #FFF;
+}
+
+.btn:hover {
+  border: 2px solid #FFF;
+}
+
+.btn-text:hover i {
+  font-size: 10px;
+  margin-right: 3px;
+  color: #FFF;
+}
+
+.hot-links a:hover {
+  color: #FFF;
+  border-bottom: 5px solid #8E793E;
+}
+
+.search-icons div:hover i {
+  color: #bfa758;
+  transform: scale(1.1);
+}
+
+.search-icons:hover {
+  cursor: pointer;
+}
+
+.toggle-button:hover .menu-bar-top,
+.toggle-button:hover .menu-bar-middle,
+.toggle-button:hover .menu-bar-bottom {
+  border: 2px solid #bfa758;
+}
+
+.search-bar input:focus::placeholder {
+  opacity: 0;
+}
+
+
+
+@media only screen and (max-width: 900px) {
   .hide-for-desktop {
     display: contents;
   }
@@ -477,12 +663,164 @@ section.data button {
     display: none;
   }
 
+  .description-table .limiter {
+    display: none;
+  }
+
+  /* Layout */
+
+    .l-header {
+      grid-template-columns: 100px 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas:
+      "menu icons"
+      "search search"
+    }
+
+    .search-bar {
+      grid-area: search;
+    }
+
+    .l-banner {
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas:
+      "Job Job"
+      "Actions Actions"
+      "HotLinks HotLinks";
+
+      width: 100vw;
+    }
+
+    .info {
+      grid-area: Job;
+    }
+
+    .actions {
+      grid-area: Actions;
+    }
+
+    .hot-links.hide-for-desktop {
+      grid-area: HotLinks;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    section.data {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas:
+      "circles"
+      "graph";
+
+      max-height: 1300px;
+      width: 100vw;
+    }
+
+    .circles {
+      grid-area: circles;
+    }
+
+    .graph {
+      grid-area: graph;
+    }
+
+    .job-details {
+      display: block;
+    }
+
+  /*---------------------------*/
+
+  .actions {
+    border: none;
+  }
+
+  .hot-links a {
+    margin: 0;
+    padding: 0;
+    position: static;
+  }
+
+  .hot-links div {
+    align-items: center;
+    display: flex;
+    font-weight: 500;
+
+    padding: 0 10px;
+    height: 50%;
+    justify-content: space-between;
+    border-top: 2px solid #AD974E;
+    width: calc(320/3);
+  }
+
+  .hot-links a {
+    color: #040404;
+    margin: auto;
+  }
+
+  .active-btn {
+    background-color: rgb(170, 152, 6);
+
+  }
+
+  .active-btn a {
+    color: #FFF;
+  }
+
+  .opacity {
+    background-color: rgba(117, 103, 4, 0.4);
+  }
+
+  .opacity:first-of-type {
+    width: 30px;
+    display: none;
+  }
+
+  .opacity:last-of-type {
+    display: none ;
+    justify-content: flex-end;
+    width: 30px;
+
+  }
+
+
+  .hot-links a:hover {
+    color: #040404;
+    border-bottom: none;
+  }
+
+  .hot-links div:hover {
+    cursor: pointer;
+  }
+
+  .active-btn a:hover {
+    color: white;
+  }
+
   .circular-chart {
     display: block;
-    margin: 10px auto;
-    max-width: 70%;
+    margin: 20px auto;
     height: 250px;
     transition: all 1s ease;
+    max-width: 70%;
+  }
+
+  .graph {
+    height: 400px;
+    text-align: center;
+  }
+
+  .graph img {
+    margin: 50px auto ;
+    max-width: 80%;
+    max-height: 350px;
+    text-align: center;
+  }
+
+  .m-link-box {
+    text-align: center;
   }
 }
 /* ------------ THEMES --------------- */
@@ -499,3 +837,16 @@ section.data button {
 .purple-stroke {
   stroke: rgb(170, 20, 241);
 }
+
+#black-text {
+
+}
+
+
+
+/* Colors */
+/*
+background-black: #040303;
+text-gold: #AD974F;
+line-gold: #8E793E;
+background-black: #040303; */
