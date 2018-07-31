@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Static Comp 3</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+  integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+  <link href="css/normalize.css" type="text/css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script src="js/app.js"></script>
+</head>
+<body>
+  <header class="l-header header-wrap">
+    <span class="toggle-button" role="menubar" aria-label="Click to open menu">
+      <div class="menu-bar menu-bar-top"></div>
+      <div class="menu-bar menu-bar-middle"></div>
+      <div class="menu-bar menu-bar-bottom"></div>
+    </span>
+    <span class="search-bar">
+      <input type="search" placeholder="Search for a job, task or resume">
+    </span>
+    <span class="search-icons">
+      <i class="fas fa-user-friends"></i>
+      <i class="fas fa-calendar"></i>
+      <i class="fas fa-th"></i>
+    </span>
+  </header>
+    <nav class="l-nav menu-wrap">
+      <div class="menu-sidebar">
+        <h3>Main</h3>
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Resumes</a></li>
+          <li><a href="#">Tasks</a></li>
+          <li><a href="#">Calendar</a></li>
+        </ul>
+        <hr class="menu-hr">
+        <h3>Admin</h3>
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Resumes</a></li>
+          <li><a href="#">Tasks</a></li>
+          <li><a href="#">Calendar</a></li>
+        </ul>
+        <hr class="menu-hr">
+        <h3>Categories</h3>
+        <ul class="menu">
+          <li><a href="#">Administrative</a></li>
+          <li><a href="#">Design</a></li>
+          <li><a href="#">Executive</a></li>
+          <li><a href="#">Human Resources</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="l-main">
+      <div class="l-banner m-banner">
+        <div class="info">
+          <h1>Full Stack Web Developer</h1>
+          <i class="fas fa-map-marker-alt"></i>
+          <p class="inline">Denver, CO</p>
+          <i class="fas fa-circle"></i>
+          <a href="#">Preview this post</a>
+        </div>
+        <div class="actions">
+          <button type="button" name="button" class="btn btn-text"><i class="fas fa-circle"></i> Open</button>
+          <button type="button" name="button" class="btn-circle"><i class="fas fa-bookmark"></i></button>
+          <button type="button" name="button" class="btn-circle"><i class="fas fa-pen"></i></button>
+          <button type="button" name="button" class="btn-circle"><i class="fas fa-trash"></i></button>
+        </div>
+        <div role="menubar" class="hot-links">
+          <a href="#">Summary</a>
+          <a href="#">Applicants</a>
+          <a href="#">Job Board</a>
+          <a href="#">Interviews</a>
+          <a href="#">Activity</a>
+          <a href="#">Broadcast</a>
+          <a href="#">Notifications</a>
+        </div>
+      </div>
+      <article class="m-summary">
+        <section class="data">
+          <div class="circles">
+            <svg viewbox="0 0 36 36" class="circular-chart">
+              <path class="outline-circle"
+                stroke-dasharray="100, 100"
+                d="M18 33.9155
+                  a 15.9155 15.9155 0 0 1 0 -31.831
+                  a 15.9155 15.9155 0 0 1 0 31.831"
+              />
+              <path class="circle red-stroke"
+                stroke-dasharray="80, 100"
+                d="M18 33.9155
+                  a 15.9155 15.9155 0 0 1 0 -31.831
+                  a 15.9155 15.9155 0 0 1 0 31.831"
+              />
+              <text x="12" y="18.35" class="percentage">3,154</text>
+              <text x="12" y="23" class="chart-text">APPLICANTS</text>
+            </svg>
+            <svg viewbox="0 0 36 36" class="circular-chart">
+              <path class="outline-circle"
+                stroke-dasharray="100, 100"
+                d="M18 33.9155
+                  a 15.9155 15.9155 0 0 1 0 -31.831
+                  a 15.9155 15.9155 0 0 1 0 31.831"
+              />
+              <path class="circle green-stroke"
+                stroke-dasharray="40, 100"
+                d="M18 33.9155
+                  a 15.9155 15.9155 0 0 1 0 -31.831
+                  a 15.9155 15.9155 0 0 1 0 31.831"
+              />
+              <text x="12" y="18.35" class="percentage">1,546</text>
+              <text x="12" y="23" class="chart-text">Interviews</text>
+            </svg>
+            <svg viewbox="0 0 36 36" class="circular-chart">
+              <path class="outline-circle"
+                stroke-dasharray="100, 100"
+                d="M18 33.9155
+                  a 15.9155 15.9155 0 0 1 0 -31.831
+                  a 15.9155 15.9155 0 0 1 0 31.831"
+              />
+              <path class="circle purple-stroke"
+                stroke-dasharray="20, 100"
+                d="M18 33.9155
+                  a 15.9155 15.9155 0 0 1 0 -31.831
+                  a 15.9155 15.9155 0 0 1 0 31.831"
+              />
+              <text x="13.5" y="18.35" class="percentage">912</text>
+              <text x="12" y="23" class="chart-text">Forwards</text>
+            </svg>
+            <button id="circle-btn" aria-label="Show total web page views">TOTALS - Out of 5231 views</button>
+          </div>
+          <div class="graph">
+            <img alt="graph showing random figures" src="imgs/bar_graph.png">
+            <button id="graph-btn" aria-label="Show Applicants per day">APPLICANTS/DAY</button>
+          </div>
+        </section>
+        <span class="split hide-for-mobile hide-for-tablet">
+          <hr>
+          <i class="fas fa-chevron-up"></i>
+          <hr>
+        </span>
+        <section class="job-details">
+          <table class="description-table">
+            <thead>
+              <tr>
+                <th class="limiter"></th>
+                <th>Job Description</th>
+                <th><button class="edit-btn"><i class="fas fa-pen"></i> Edit</button></th>
+                <th class="limiter"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="limiter"></td>
+                <td>Position title</td>
+                <td>Full-stack Web Dev</td>
+                <td class="limiter"></td>
+              </tr>
+              <tr>
+                <td class="limiter"></td>
+                <td>Location</td>
+                <td>Toronto, ON</td>
+                <td class="limiter"></td>
+              </tr>
+              <tr>
+                <td class="limiter"></td>
+                <td>Employment Type</td>
+                <td>Full-time</td>
+                <td class="limiter"></td>
+              </tr>
+              <tr>
+                <td class="limiter"></td>
+                <td>Experience</td>
+                <td>Junior Developer</td>
+                <td class="limiter"></td>
+              </tr>
+              <tr>
+                <td class="limiter"></td>
+                <td>Status</td>
+                <td>Open</td>
+                <td class="limiter"></td>
+              </tr>
+              <tr>
+                <td class="limiter"></td>
+                <td>Description</td>
+                <td>
+                  This is a critical role at PUSH that revolves around working closely within our development team. You will start off by performing user acceptance tests for new feature builds, identifying bugs before our customers experience them. The role will also involve documenting manual test cases but more importantly, developing automated test cases along with our developers and product manager. Our goal will be to get you to work and interact with our code in less than 6 months at which point, you will be moved up to a full development role either on Mobile or Web.
+                </td>
+                <td class="limiter"></td>
+              </tr>
+              <tr>
+                <td class="limiter"></td>
+                <td>Hiring Lead</td>
+                <td>
+                  <img alt="Image of hiring manager">
+                  Clara Cat
+                </td>
+                <td class="limiter"></td>
+              </tr>
+              <tr>
+                <td class="limiter"></td>
+                <td>Approved Salary</td>
+                <td>
+                  $70,000
+                </td>
+                <td class="limiter"></td>
+              </tr>
+            </tbody>
+          </table>
+          <aside>
+            <div class="social-btns" aria-label="Social Media Buttons">
+              <button type="button" name="Facebook"><i class="fab fa-facebook"></i>Post to Facebook</button>
+              <button type="button" name="Twitter"><i class="fab fa-twitter">Post to Twitter</i></button>
+              <button type="button" name="LinkedIn"><i class="fab fa-linkedin"></i>Post to LinkedIn</button>
+          </div>
+          <div class="m-link-box">
+            <i class="fas fa-globe hide-for-tablet"></i><h4>Link to this Job</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer venenatis mollis elit, consectetur varius ex venenatis vel.</p>
+            <form class="" action="index.html" method="post">
+              <input aria-label="Link to post on Facebook" type="url" placeholder="https://www.thisismyurl.com/17-18-18"><button type="button">Copy</button>
+            </form>
+            <hr>
+          </div>
+          <div class="m-link-box">
+            <i class="fab fa-github-alt hide-for-tablet"></i><h4>Clara Cat is the Cutest</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer venenatis mollis elit, consectetur varius ex venenatis vel.</p>
+            <form class="" action="index.html" method="post">
+              <input aria-label="Link to post on Facebook" type="url" placeholder="https://www.thisismyurl.com/17-18-18"><button type="button">Copy</button>
+            </form>
+            <hr>
+          </div>
+          <div class="m-link-box">
+            <i class="fab fa-apple hide-for-tablet"></i><h4>Sitting on the Porch</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer venenatis mollis elit, consectetur varius ex venenatis vel.</p>
+            <form class="" action="index.html" method="post">
+              <input aria-label="Link to post on Facebook" type="url" placeholder="https://www.thisismyurl.com/17-18-18"><button type="button">Copy</button>
+            </form>
+            <hr>
+          </div>
+        </section>
+      </article>
+
+    </main>
+
+  <!-- <span class="toggle-button">
+       <div class="menu-bar menu-bar-top"></div>
+       <div class="menu-bar menu-bar-middle"></div>
+       <div class="menu-bar menu-bar-bottom"></div>
+  </span>
+  <div class="menu-wrap">
+    <div class="menu-sidebar">
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li class="menu-item-has-children"><a href="#">Click The Arrow</a>
+                <span class="sidebar-menu-arrow"></span>
+                <ul class="sub-menu">
+                    <li><a href="#">Alignment</a></li>
+                    <li><a href="#">Markup</a></li>
+                    <li><a href="#">Comments</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Get In Touch</a></li>
+        </ul>
+    </div>
+</div> -->
+</body>
+</html>

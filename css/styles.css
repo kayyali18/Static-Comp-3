@@ -1,0 +1,501 @@
+/* ------------ BASE --------------- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.btn-circle {
+  border: 1px solid rgba(142, 142, 142, .4);
+  border-radius: 50%;
+  height: 30px;
+  padding: 3px;
+  width: 30px;
+}
+
+.btn-circle i {
+  font-size: 12px;
+  opacity: .7;
+}
+
+/* ------------ LAYOUT --------------- */
+
+.l-banner {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+  "personal btns"
+  "hot-links hot-links"
+}
+
+.l-banner .hot-links {
+  grid-area: hot-links;
+}
+
+.l-header {
+  border: 3px solid red;
+  display: grid;
+  grid-template-columns: 100px 1fr 300px;
+  height: 100px;
+}
+
+.l-header .search-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.l-main {
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+}
+
+
+
+
+
+
+
+
+/* ------------ MODULES --------------- */
+
+/* Header */
+
+.slide-right {
+  margin-left: 280px;
+  transition: .3s;
+}
+
+.search-bar input {
+  height: 100%;
+  width: 100%;
+}
+
+.search-icons i {
+  font-size: 24px;
+  margin: auto;
+
+}
+
+   /* Menu toggle */
+
+  .toggle-button {
+    height: 40px;
+    margin: auto;
+    padding: 4px;
+    position: relative;
+    transition: .25s;
+    width: 44px;
+    z-index: 15;
+  }
+  .toggle-button:hover {
+    cursor: pointer;
+  }
+  .toggle-button .menu-bar {
+    position: absolute;
+    border-radius: 2px;
+    width: 80%;
+    transition: .5s;
+  }
+  .toggle-button .menu-bar-top {
+    border: 2px solid #555;
+    border-bottom: none;
+    top: 5px;
+  }
+  .toggle-button .menu-bar-middle {
+    height: 2px;
+    background-color: #555;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    top: 9px;
+  }
+  .toggle-button .menu-bar-bottom {
+    border: 2px solid #555;
+    border-top: none;
+    top: 22px;
+  }
+  .button-open .menu-bar-top {
+    transform: rotate(45deg) translate(8px, 8px);
+    transition: .5s;
+  }
+  .button-open .menu-bar-middle {
+    transform: translate(230px);
+    transition: .1s ease-in;
+    opacity: 0;
+  }
+  .button-open .menu-bar-bottom {
+    transform: rotate(-45deg) translate(8px, -7px);
+    transition: .5s;
+  }
+
+
+/* Nav Menu */
+
+.menu-wrap {
+    background-color: #6968AB;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 280px;
+    margin-left: -280px;
+    font-size: 1em;
+    font-weight: 700;
+    overflow: auto;
+    transition: .25s;
+    z-index: 10;
+}
+
+.menu-show {
+    margin-left: 0;
+    box-shadow: 4px 2px 15px 1px #B9ADAD;
+}
+
+.menu-sidebar li > a::after {
+    content: "";
+    display: block;
+    height: 0.15em;
+    position: absolute;
+    top: 100%;
+    width: 102%;
+    left: 50%;
+    transform: translate(-50%);
+    background-image: linear-gradient(to right, transparent 50.3%, #FFFA3B 50.3%);
+    transition: background-position .2s .1s ease-out;
+    background-size: 200% auto;
+}
+.menu-sidebar li > a:hover::after {
+    background-position: -100% 0;
+}
+
+/* Banner */
+
+.actions {
+  border: 2px solid green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actions button {
+  margin: 1rem;
+}
+
+.btn-text {
+  align-items: center;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  padding: 5px;
+  width: 80px;
+}
+
+.btn-text i {
+  font-size: 10px;
+  margin-right: 3px;
+}
+
+.hot-links {
+  align-items: flex-end;
+  border: 2px solid blue;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.hot-links a {
+  margin: 1rem;
+}
+
+.m-banner .info {
+  border: 2px solid red;
+}
+
+.info p {
+  margin: 0;
+  width: 200px;
+}
+
+.info i {
+  margin: 0 5px;
+}
+
+.info i:last-of-type {
+  font-size: 3px;
+  position: relative;
+  top: -3px;
+}
+
+
+.inline {
+  display: inline;
+}
+
+/* Job Summary */
+
+.m-summary {
+  background-color: #EAF1F5;
+  padding: 2rem;
+}
+
+
+  /*  Graphs  */
+
+#circle-btn {
+  width: 250px;
+}
+
+#graph-btn {
+  width: 150px;
+}
+
+section.data {
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+}
+
+section.data button {
+  border: 1px solid rgba(142, 142, 142, .4);
+  border-radius: 10px;
+  height: 30px;
+  padding: 2px;
+}
+
+.circular-chart {
+  display: inline-block;
+  margin: 10px auto;
+  max-width: 30%;
+  height: 250px;
+}
+
+.circle {
+  stroke: #4CC790;
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  animation: progress 4s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+
+  60% {
+    stroke-dasharray: 100 100;
+  }
+}
+
+.circles {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.outline-circle {
+  stroke: #d8dddb;
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+}
+
+.graph {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.graph img {
+  margin: 10px auto;
+  height: 250px;
+  width: 100%;
+}
+
+.percentage {
+  font-size: 5px;
+  font-weight: 800;
+}
+
+.chart-text {
+  font-size: 2px;
+}
+
+/* Hr Split */
+
+.split {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0;
+}
+
+.split hr {
+  border: 3px solid black;
+  display: inline-block;
+  width: 47%;
+}
+
+.split i {
+  text-align: center;
+  width: 4%;
+}
+
+.split i::before {
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+  /* Job Description */
+
+.job-details {
+  display: grid;
+  grid-template-columns: 3fr 1.5fr;
+  grid-gap: 65px;
+  margin-top: 3rem;
+}
+
+.job-details aside {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+  /* Table */
+
+.description-table {
+  border-collapse: collapse;
+  height: 100%;
+  line-height: 22px;
+  width: 100%;
+}
+
+.description-table thead {
+  background-color: rgb(94, 94, 93);
+}
+
+.description-table tbody {
+  background-color: rgb(230, 230, 230);
+}
+
+.description-table tbody tr {
+  margin: 0 10px;
+}
+
+.description-table tbody tr:last-child td {
+  border: none;
+}
+
+.description-table tbody td {
+  border-bottom: 1px solid gray;
+  padding: 20px 1rem;
+}
+
+.description-table tbody td:nth-of-type(2) {
+  vertical-align: top;
+  font-weight: 800;
+}
+
+.description-table th {
+  height: 80px;
+}
+
+.description-table td {
+
+}
+
+.description-table .limiter {
+  border: none;
+}
+
+  /* Aside */
+
+.social-btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 5% 0;
+}
+
+.social-btns button {
+  height: 40px;
+
+}
+
+.m-link-box {
+
+}
+
+.m-link-box .container {
+  height: 50%;
+}
+
+.m-link-box span {
+
+}
+
+.m-link-box i,
+.m-link-box h4 {
+  display: inline-block;
+  margin: 10px 5px;
+}
+
+.m-link-box p {
+  line-height: 25px;
+  margin: 10px 5px;
+}
+
+.m-link-box input,
+.m-link-box button {
+  border: none;
+  height: 50px;
+  margin: 10px 0 30px;
+  text-align: center;
+}
+
+.m-link-box input {
+  width: 75%;
+}
+
+.m-link-box button {
+  background-color: rgb(79, 174, 235);
+  border: none;
+  width: 25%;
+}
+
+/* ------------ STATE --------------- */
+
+@media only screen and (max-width: 1124px) {
+  .hide-for-desktop {
+    display: contents;
+  }
+
+  .hide-for-tablet {
+    display: none;
+  }
+
+  .circular-chart {
+    display: block;
+    margin: 10px auto;
+    max-width: 70%;
+    height: 250px;
+    transition: all 1s ease;
+  }
+}
+/* ------------ THEMES --------------- */
+
+
+.red-stroke {
+  stroke: rgb(227, 34, 34);
+}
+
+.green-stroke {
+  stroke: rgb(11, 208, 108);
+}
+
+.purple-stroke {
+  stroke: rgb(170, 20, 241);
+}
