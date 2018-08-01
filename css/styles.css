@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #040404;
+  background-color: #FFF;
   color: #AD794E;
   font-family: 'Montserrat', sans-serif;
 }
@@ -25,8 +25,8 @@ button:hover {
 }
 
 .btn {
-  border: 2px solid #FFF;
-  background-color: #AD974F;
+  border: 2px solid #AD974F;
+  background-color: #FFF;
 }
 
 .hide-for-desktop {
@@ -49,10 +49,10 @@ button:hover {
 }
 
 .l-header {
-  background-color: #040404;
+  background-color: rgb(255, 255, 255);
   display: grid;
   grid-template-columns: 100px 1fr 300px;
-  height: 100px;
+  height: 60px;
 }
 
 .l-header .search-icons {
@@ -84,19 +84,21 @@ button:hover {
 
 .search-bar input {
   background-color: #fff;
-  border: 2px solid #AD794E;
+  border: none;
+  border-left: 1px solid #AD794E;
+  border-right: 1px solid #AD794E;
   font-size: 20px;
-  letter-spacing: 3px;
   font-weight: 600;
   height: 100%;
-  text-align: center;
+  letter-spacing: 1px;
   width: 100%;
 }
 
 .search-bar input::placeholder {
-  color: #8E793E;
+  color: rgba(0, 0, 0, 0.53);
   font-size: 1rem;
   font-weight: 700;
+  padding-left: 1rem;
 }
 
 .search-icons div {
@@ -107,7 +109,7 @@ button:hover {
 }
 
 .search-icons i {
-  color: #8E793E;
+  color: #171717;
   font-size: 34px;
   transition: all .5s ease;
 }
@@ -115,37 +117,35 @@ button:hover {
    /* Menu toggle */
 
   .toggle-button {
-    height: 40px;
     margin: auto;
-    padding: 4px;
     position: relative;
     transition: .25s;
-    width: 44px;
+    width: 34px;
     z-index: 15;
   }
   .toggle-button:hover {
     cursor: pointer;
   }
   .menu-bar {
-    position: absolute;
+    display: flex;
     border-radius: 2px;
-    width: 80%;
-    transition: .5s;
+    transition: .1s;
+    width: 100%;
   }
   .menu-bar-top {
-    border: 2px solid #8E793E;
+    border: 2px solid #171717;
     border-bottom: none;
     top: 5px;
   }
   .menu-bar-middle {
     height: 2px;
-    background-color: #8E793E;
+    background-color: #171717;
     margin-top: 4px;
     margin-bottom: 4px;
     top: 9px;
   }
   .menu-bar-bottom {
-    border: 2px solid #8E793E;
+    border: 2px solid #171717;
     border-top: none;
     top: 22px;
   }
@@ -354,12 +354,8 @@ ul.menu i::before {
   color: #040404;
 }
 
-.hot-links {
-  text-align: center;
-}
-
 .hot-links a {
-  color: #AD794E;
+  color: #171717;
   margin: 1rem;
   padding: 25px 0;
   position: relative;
@@ -375,14 +371,13 @@ ul.menu i::before {
 }
 
 .m-banner {
-  background-color: #040404;
+  background-color: #FFF;
   border-top: 2px solid #AD794E;
-  color: white;
+  color: #040404;
 }
 
 .info {
-
-  text-align: center;
+  margin-left: 1rem;
 }
 
 .info p {
@@ -425,12 +420,15 @@ ul.menu i::before {
 
 #graph-btn {
   font-size: 14px;
+  margin: 12.5px;
   width: 150px;
 }
 
 section.data {
+  background-color: #171717;
   display: grid;
   grid-template-columns: 4fr 3fr;
+  height: 350px;
 }
 
 section.data button {
@@ -681,30 +679,31 @@ a:hover {
 }
 
 .actions button:hover {
-  color: #FFF;
+  color: #8E793E;
 }
 
 .btn:hover {
-  border: 2px solid #FFF;
+  border: 2px solid #AD974F;
 }
 
 .btn-text:hover i {
   font-size: 10px;
   margin-right: 3px;
-  color: #FFF;
+  color: #8E793E;
 }
 
 .hot-links a:hover {
-  color: #FFF;
+  color: #8E793E;
   border-bottom: 5px solid #8E793E;
 }
 
 .search-icons div:hover i {
-  color: #bfa758;
+  color: #171717;
   transform: scale(1.1);
 }
 
-.search-icons:hover {
+.search-icons div:hover {
+  background-color: #bfa758;
   cursor: pointer;
 }
 
@@ -721,6 +720,12 @@ a:hover {
 .split i:hover::before {
   border: 2px solid #FFF;
   cursor: pointer;
+}
+
+#graph-btn:hover,
+#circle-btn:hover {
+  background-color: #8E793E;
+  color: white;
 }
 
 @media only screen and (max-width: 800px) {
