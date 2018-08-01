@@ -7,13 +7,17 @@
 }
 
 body {
-  background-color: #FFF;
+  background-color: #171717;
   color: #AD794E;
   font-family: 'Montserrat', sans-serif;
 }
 
 a {
   text-decoration: none;
+}
+
+form {
+  display: flex;
 }
 
 a:visited {
@@ -49,7 +53,6 @@ button:hover {
 }
 
 .l-header {
-  background-color: rgb(255, 255, 255);
   display: grid;
   grid-template-columns: 100px 1fr 300px;
   height: 60px;
@@ -109,7 +112,7 @@ button:hover {
 }
 
 .search-icons i {
-  color: #171717;
+  color: #AD974F;
   font-size: 34px;
   transition: all .5s ease;
 }
@@ -133,19 +136,19 @@ button:hover {
     width: 100%;
   }
   .menu-bar-top {
-    border: 2px solid #171717;
+    border: 2px solid #AD974F;
     border-bottom: none;
     top: 5px;
   }
   .menu-bar-middle {
     height: 2px;
-    background-color: #171717;
+    background-color: #AD974F;
     margin-top: 4px;
     margin-bottom: 4px;
     top: 9px;
   }
   .menu-bar-bottom {
-    border: 2px solid #171717;
+    border: 2px solid #AD974F;
     border-top: none;
     top: 22px;
   }
@@ -620,12 +623,11 @@ section.data button {
 }
 
 .social-btns button {
-  background-color: #8E793E;
   border: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 40px;
-  padding: 0 100px;
+  padding: 0 90px 0 50px;
 
 }
 
@@ -728,7 +730,7 @@ a:hover {
   color: white;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 500px) {
   .hide-for-desktop {
     display: contents;
   }
@@ -909,15 +911,15 @@ a:hover {
 
 
 .red-stroke {
-  stroke: rgb(227, 34, 34);
+  stroke: #dbb023;
 }
 
 .green-stroke {
-  stroke: rgb(11, 208, 108);
+  stroke: #dbb023;
 }
 
 .purple-stroke {
-  stroke: rgb(170, 20, 241);
+  stroke: #dbb023;
 }
 
 #black-text {
@@ -931,4 +933,5 @@ a:hover {
 background-black: #040303;
 text-gold: #AD974F;
 line-gold: #8E793E;
+bright-gold: #dbb023;
 background-black: #040303; */
