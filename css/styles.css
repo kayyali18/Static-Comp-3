@@ -7,6 +7,8 @@
 }
 
 body {
+  background-color: #040404;
+  color: #AD794E;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -68,6 +70,10 @@ button:hover {
 }
 
 /* ------------ MODULES --------------- */
+
+.align-right {
+  text-align: right;
+}
 
 /* Header */
 
@@ -387,10 +393,14 @@ ul.menu li{
   /*  Graphs  */
 
 #circle-btn {
+  grid-column: 1/4;
+  margin: auto;
+  font-size: 14px;
   width: 250px;
 }
 
 #graph-btn {
+  font-size: 14px;
   width: 150px;
 }
 
@@ -409,7 +419,7 @@ section.data button {
 .circular-chart {
   display: inline-block;
   margin: 10px auto;
-  max-width: 30%;
+  max-width: 80%;
   height: 250px;
 }
 
@@ -432,12 +442,14 @@ section.data button {
 }
 
 .circles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(50px, 1fr));
   text-align: center;
   text-transform: uppercase;
 }
 
 .outline-circle {
-  stroke: #d8dddb;
+  stroke: #FFF;
   fill: none;
   stroke-width: 2.8;
   stroke-linecap: round;
@@ -451,17 +463,21 @@ section.data button {
 }
 
 .graph img {
+  border-top: 5px solid #AD974E;
+  border-bottom: 5px solid #AD974E;
   margin: 20px auto;
   max-width: 80%;
   max-height: 350px;
 }
 
 .percentage {
+  fill: white;
   font-size: 5px;
   font-weight: 800;
 }
 
 .chart-text {
+  fill: #AD974E;
   font-size: 2px;
 }
 
@@ -475,9 +491,9 @@ section.data button {
 }
 
 .split hr {
-  border: 3px solid black;
+  border: 3px solid #8E793E;
   display: inline-block;
-  width: 47%;
+  width: 37%;
 }
 
 .split i {
@@ -486,7 +502,7 @@ section.data button {
 }
 
 .split i::before {
-  border: 2px solid black;
+  border: 2px solid #8E793E;
   border-radius: 50%;
   padding: 8px;
 }
@@ -515,11 +531,24 @@ section.data button {
 }
 
 .description-table thead {
-  background-color: rgb(94, 94, 93);
+  background-color: #AD974E;
+  color: #FFF;
+}
+
+.description-table th {
+  padding: 1rem;
+}
+
+.edit-btn {
+  background: none;
+  border-radius: 20px;
+  color: #FFF;
+  padding: 10px;
 }
 
 .description-table tbody {
   background-color: rgb(230, 230, 230);
+  color: #040404;
 }
 
 .description-table tbody tr {
@@ -543,9 +572,16 @@ section.data button {
 .description-table th {
   height: 80px;
 }
+.description-table .hiring-lead {
+  display: flex;
+  align-items: center;
+}
 
-.description-table td {
-
+.description-table .hiring-lead img {
+  border-radius: 50%;
+  height: 50px;
+  margin: 0 1rem;
+  width: 50px;
 }
 
 .description-table .limiter {
@@ -562,12 +598,17 @@ section.data button {
 }
 
 .social-btns button {
+  background-color: #8E793E;
+  border: none;
+  display: flex;
+  justify-content: space-around;
   height: 40px;
+  padding: 0 100px;
 
 }
 
 .m-link-box {
-
+  color: #FFF;
 }
 
 .m-link-box .container {
@@ -580,6 +621,7 @@ section.data button {
 
 .m-link-box i,
 .m-link-box h4 {
+  color: #AD974E;
   display: inline-block;
   margin: 10px 5px;
 }
@@ -602,7 +644,7 @@ section.data button {
 }
 
 .m-link-box button {
-  background-color: rgb(79, 174, 235);
+  background-color: #AD974E;
   border: none;
   width: 25%;
 }
@@ -652,9 +694,12 @@ a:hover {
   opacity: 0;
 }
 
+.split i:hover::before {
+  border: 2px solid #FFF;
+  cursor: pointer;
+}
 
-
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 800px) {
   .hide-for-desktop {
     display: contents;
   }
@@ -707,6 +752,12 @@ a:hover {
       align-items: flex-end;
     }
 
+    .circles {
+      display: block;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
     section.data {
       display: grid;
       grid-template-columns: 1fr;
@@ -729,6 +780,7 @@ a:hover {
 
     .job-details {
       display: block;
+      margin: 0;
     }
 
   /*---------------------------*/
@@ -809,6 +861,7 @@ a:hover {
 
   .graph {
     height: 400px;
+    justify-content: normal;
     text-align: center;
   }
 

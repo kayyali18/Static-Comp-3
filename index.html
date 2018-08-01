@@ -46,11 +46,11 @@
         <hr class="menu-hr">
         <h3>Admin</h3>
         <ul class="menu">
-          <li class="myButton"><a href="#">Home</a></li>
-          <li class="myButton"><a href="#">Jobs</a></li>
-          <li class="myButton"><a href="#">Resumes</a></li>
-          <li class="myButton"><a href="#">Tasks</a></li>
-          <li class="myButton"><a href="#">Calendar</a></li>
+          <li class="myButton"><a href="#">Users</a></li>
+          <li class="myButton"><a href="#">Locations</a></li>
+          <li class="myButton"><a href="#">Workflows</a></li>
+          <li class="myButton"><a href="#">Job Boards</a></li>
+          <li class="myButton"><a href="#">Social</a></li>
         </ul>
         <hr class="menu-hr">
         <h3>Categories</h3>
@@ -145,11 +145,11 @@
               <text x="13.5" y="18.35" class="percentage">912</text>
               <text x="12" y="23" class="chart-text">Forwards</text>
             </svg>
-            <button id="circle-btn" aria-label="Show total web page views">TOTALS - Out of 5231 views</button>
+            <button id="circle-btn" class="btn" aria-label="Show total web page views">TOTALS - Out of 5231 views</button>
           </div>
           <div class="graph">
             <img alt="graph showing random figures" src="imgs/bar_graph.png">
-            <button id="graph-btn" aria-label="Show Applicants per day">APPLICANTS/DAY</button>
+            <button id="graph-btn" class="btn" aria-label="Show Applicants per day">APPLICANTS/DAY</button>
           </div>
         </section>
         <span class="split hide-for-mobile hide-for-tablet">
@@ -163,7 +163,7 @@
               <tr>
                 <th class="limiter"></th>
                 <th>Job Description</th>
-                <th><button class="edit-btn"><i class="fas fa-pen"></i> Edit</button></th>
+                <th class="align-right"><button class="btn edit-btn"><i class="fas fa-pen"></i> Edit</button></th>
                 <th class="limiter"></th>
               </tr>
             </thead>
@@ -210,8 +210,10 @@
                 <td class="limiter"></td>
                 <td>Hiring Lead</td>
                 <td>
-                  <img alt="Image of hiring manager">
-                  Clara Cat
+                  <div class="hiring-lead">
+                    <img alt="Image of hiring manager" src="https://vignette.wikia.nocookie.net/animal-jam-clans-1/images/7/7c/9cf2aaef2d8d7df45vfgrdtfder083f04dabc7bdae--seal-point-siamese-blue-point-siamese-cats.jpg/revision/latest?cb=20171108192931">
+                    Clara Cat
+                  </div>
                 </td>
                 <td class="limiter"></td>
               </tr>
@@ -227,15 +229,15 @@
           </table>
           <aside>
             <div class="social-btns" aria-label="Social Media Buttons">
-              <button type="button" name="Facebook"><i class="fab fa-facebook"></i>Post to Facebook</button>
-              <button type="button" name="Twitter"><i class="fab fa-twitter">Post to Twitter</i></button>
-              <button type="button" name="LinkedIn"><i class="fab fa-linkedin"></i>Post to LinkedIn</button>
+              <button class="btn" type="button" name="Facebook"><i class="fab fa-facebook"></i>Post to Facebook</button>
+              <button class="btn" type="button" name="LinkedIn"><i class="fab fa-twitter"></i>Post to Twitter</button>
+              <button class="btn" type="button" name="LinkedIn"><i class="fab fa-linkedin"></i>Post to LinkedIn</button>
           </div>
           <div class="m-link-box">
             <i class="fas fa-globe hide-for-tablet"></i><h4>Link to this Job</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer venenatis mollis elit, consectetur varius ex venenatis vel.</p>
             <form class="" action="index.html" method="post">
-              <input aria-label="Link to post on Facebook" type="url" placeholder="https://www.thisismyurl.com/17-18-18"><button type="button">Copy</button>
+              <input aria-label="Link to post on Facebook" type="url" placeholder="https://www.thisismyurl.com/17-18-18"><button class="btn" type="button">Copy</button>
             </form>
             <hr>
           </div>
@@ -243,7 +245,7 @@
             <i class="fab fa-github-alt hide-for-tablet"></i><h4>Clara Cat is the Cutest</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer venenatis mollis elit, consectetur varius ex venenatis vel.</p>
             <form class="" action="index.html" method="post">
-              <input aria-label="Link to post on Facebook" type="url" placeholder="https://www.thisismyurl.com/17-18-18"><button type="button">Copy</button>
+              <input aria-label="Link to post on Facebook" type="url" placeholder="https://www.thisismyurl.com/17-18-18"><button class="btn" type="button">Copy</button>
             </form>
             <hr>
           </div>
@@ -251,7 +253,7 @@
             <i class="fab fa-apple hide-for-tablet"></i><h4>Sitting on the Porch</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer venenatis mollis elit, consectetur varius ex venenatis vel.</p>
             <form class="" action="index.html" method="post">
-              <input aria-label="Link to post on Facebook" type="url" placeholder="https://www.thisismyurl.com/17-18-18"><button type="button">Copy</button>
+              <input aria-label="Link to post on Facebook" type="url" placeholder="https://www.thisismyurl.com/17-18-18"><button class="btn" type="button">Copy</button>
             </form>
             <hr>
           </div>
