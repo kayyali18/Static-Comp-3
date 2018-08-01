@@ -126,66 +126,80 @@ button:hover {
   .toggle-button:hover {
     cursor: pointer;
   }
-  .toggle-button .menu-bar {
+  .menu-bar {
     position: absolute;
     border-radius: 2px;
     width: 80%;
     transition: .5s;
   }
-  .toggle-button .menu-bar-top {
+  .menu-bar-top {
     border: 2px solid #8E793E;
     border-bottom: none;
     top: 5px;
   }
-  .toggle-button .menu-bar-middle {
+  .menu-bar-middle {
     height: 2px;
     background-color: #8E793E;
     margin-top: 4px;
     margin-bottom: 4px;
     top: 9px;
   }
-  .toggle-button .menu-bar-bottom {
+  .menu-bar-bottom {
     border: 2px solid #8E793E;
     border-top: none;
     top: 22px;
   }
   .button-open .menu-bar-top {
     transform: rotate(45deg) translate(8px, 8px);
-    transition: .5s;
+    transition: 1.5s;
   }
   .button-open .menu-bar-middle {
     transform: translate(230px);
-    transition: .1s ease-in;
+    transition: 2s cubic-bezier(1,-0.2, 1, 1);
     opacity: 0;
   }
   .button-open .menu-bar-bottom {
     transform: rotate(-45deg) translate(8px, -7px);
-    transition: .5s;
+    transition: 1.5s;
   }
 
 
 /* Nav Menu */
 
 .menu-wrap {
-    background-color: #040303;
+    background-color: #fff;
     color: #AD974F;
-    position: fixed;
-    top: 0;
-    height: 100%;
-    width: 280px;
-    margin-left: -280px;
     font-size: 1em;
     font-weight: 500;
+    height: 100%;
+    margin-left: -280px;
     overflow: auto;
+    position: fixed;
+    text-align: center;
+    top: 0;
     transition: .25s;
+    width: 280px;
     z-index: 10;
 }
 
-.menu-wrap h2,
-.menu-wrap h3 {
+.menu-wrap h2 {
   margin: 10px;
   text-align: center;
   font-style: italic;
+}
+
+.menu-wrap h3 {
+  font-size: 12px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.menu-portrait {
+  border: 2px solid #AD974F;
+  border-radius: 50%;
+  height: 110px;
+  margin: 30px auto 20px;
+  width: 110px;
 }
 
 .menu-show {
@@ -193,29 +207,40 @@ button:hover {
 }
 
 .menu-sidebar {
+  border-top: 3px solid #AD974F;
   height: 100%;
 }
 
-.menu-sidebar ul {
+.menu-sidebar li {
+  background-color: #FFF;
+  border-left: 6px solid #AD974F;
+  color: #171717;
+  height: 100%;
+  padding: 20px 0 10px 20px;
+  text-align: left;
+}
+
+ul.menu {
   display: flex;
   flex-direction: column;
   height: 30%;
   list-style: none;
 }
 
-.menu-sidebar li {
-  background-color: #171717;
-  color: #FFF;
-  height: 100%;
-  text-align: center;
+ul.menu i::before {
+  font-size: 10px;
+  margin-right: 15px;
+  position: relative;
+  bottom: 1px;
 }
 
-ul.menu li{
-  padding-top: 20px;
+.menu-sections {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  margin: 2rem 0;
 }
 
-
-.menu-sidebar li > a::after {
+/* .menu-sidebar li > a::after {
     content: "";
     display: block;
     height: 0.15em;
@@ -224,17 +249,16 @@ ul.menu li{
     width: 102%;
     left: 50%;
     transform: translate(-50%);
-    background-color: #AD974F;
     transition: background-position .2s .1s ease-out;
     background-size: 200% auto;
-}
+} */
 
 .menu-sidebar li > a:hover::after {
     background-position: -100% 0;
 }
 
 /* normal button style */
-.myButton {
+.menu-btns {
     width: 100%;
     height: 30px;
     text-align: center;
@@ -242,7 +266,7 @@ ul.menu li{
     position: relative;
 }
 /* button hover style if required */
-.myButton:hover {
+.menu-btns:hover {
   cursor: pointer;
   color: rgba(232, 179, 3, 0.43)
 }
@@ -254,7 +278,7 @@ ul.menu li{
  * will play in reverse when your mouse
  * leaves the element
  */
-.myButton:after {
+.menu-btns:after {
     content: "";
     position: absolute;
     top: 0px;
@@ -273,7 +297,7 @@ ul.menu li{
  * 100% and opacity to 0 so the element
  * grows and fades out
  */
-.myButton:hover:after {
+.menu-btns:hover:after {
     width: 120%;
     background-color: rgba(255,255,255,0);
     -webkit-transition: all .7s ease-out;
