@@ -7,7 +7,6 @@ $(document).ready(function() {
     $(this).toggleClass('button-open');
     $menuWrap.toggleClass('menu-show');
     $headerWrap.toggleClass('slide-right');
-    $main.children().toggleClass('slide-right');
   });
 
   var $sidebarArrow = $('.sidebar-menu-arrow');
