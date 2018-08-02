@@ -33,10 +33,6 @@ button:hover {
   background-color: #FFF;
 }
 
-.hide-for-desktop {
-  display: none;
-}
-
 /* ------------ LAYOUT --------------- */
 
 .l-banner {
@@ -65,7 +61,6 @@ button:hover {
 
 .l-main {
   display: grid;
-  grid-template-rows: 1fr 10fr;
 }
 
 .l-summary {
@@ -675,6 +670,10 @@ section.data button {
 
 /* ------------ STATE --------------- */
 
+.hide-for-desktop {
+  display: none;
+}
+
 a:hover {
   color: #AD794E;
   font-weight: 500;
@@ -730,12 +729,201 @@ a:hover {
   color: white;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 920px) {
+
   .hide-for-desktop {
     display: contents;
   }
 
   .hide-for-tablet {
+    display: none;
+  }
+
+  /* Layout */
+
+  .l-header {
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "menu icons"
+    "search search";
+    height: 100px;
+  }
+
+  .search-bar {
+    border-bottom: 2px solid #000;
+    grid-area: search;
+  }
+
+  main.hide-for-desktop {
+    display: grid;
+    grid-template-columns: 150px repeat(2, minmax(100px, 1fr));
+    grid-template-rows: 150px 550px 300px repeat(2, 1fr);
+    grid-template-areas:
+    "info info actions"
+    "hot-links circles circles"
+    "buttons graph graph"
+    "tables tables tables"
+    "social social social"
+
+  }
+
+  .info {
+    background-color: #FFF;
+    color: #000;
+    grid-area: info;
+    margin: 0;
+    padding-left: 1rem;
+  }
+
+  .actions {
+    background-color: #FFF;
+    grid-area: actions;
+  }
+
+  .actions section {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+  }
+
+  .actions-tablet {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .actions-bigbtn-tablet {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .hot-links {
+    align-items: stretch;
+
+    grid-area: hot-links;
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    justify-content: space-around;
+    transition: all 1.5s ease;
+  }
+
+  .circles {
+    align-items: center;
+    grid-area: circles;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 550px;
+  }
+
+  .graph {
+    grid-area: graph;
+    height: 300px;
+  }
+
+  .btns-tablet {
+    display: block;
+    grid-area: buttons;
+    height: 300px;
+    padding-top: 90px;
+    text-align: center;
+    width: 200px;
+  }
+
+  .description-table {
+    grid-area: tables;
+  }
+
+  .social-tablet {
+    grid-area: social;
+  }
+
+  .social-btns {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .social-btns button {
+    display: inline-block;
+    padding: 10px;
+    margin: 0 15px;
+
+  }
+
+  .m-link-box {
+    margin: 10px 60px;
+  }
+
+  /* ------------ */
+
+  .active {
+  }
+
+  .actions .btn-text {
+
+  }
+
+  .btn-circle {
+    margin: 1rem;
+  }
+
+  .btns-tablet label {
+    font-size: 20px;
+    word-wrap: break-word;
+  }
+
+  #circle-btn {
+    background: none;
+    border: none;
+    color: #FFF;
+    display: block;
+    width: auto;
+  }
+
+  #graph-btn {
+    background: none;
+    border: none;
+    color: #FFF;
+    width: auto;
+  }
+
+  .circular-chart {
+    max-width: 200px;
+  }
+
+  .graph img {
+    margin: 0;
+  }
+
+  .hot-links a {
+    background-color: #dbb023;
+    color: #171717;
+    margin: 0;
+    text-align: center;
+    top: 0;
+    left: -127px;
+  }
+
+  .hot-links a:hover {
+    color: #171717;
+    border-bottom: none;
+    left: 0;
+    transition: .3s;
+
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+  .hide-for-desktop {
+    display: contents;
+  }
+
+  .hide-for-mobile {
     display: none;
   }
 
