@@ -618,11 +618,13 @@ section.data button {
 }
 
 .social-btns button {
+  align-items: center;
   border: none;
   display: flex;
-  justify-content: space-between;
-  height: 40px;
-  padding: 0 90px 0 50px;
+  font-weight: 500;
+  justify-content: space-around;
+  height: 50px;
+  padding: 0 90px 0 0px;
 
 }
 
@@ -848,8 +850,12 @@ a:hover {
   .social-btns button {
     display: inline-block;
     padding: 10px;
-    margin: 0 15px;
+    margin: 10px 15px;
 
+  }
+
+  .social-btns i {
+    padding-right: 15px;
   }
 
   .m-link-box {
@@ -1126,6 +1132,23 @@ a:hover {
 }
 /* ------------ THEMES --------------- */
 
+.big-icon {
+  font-size: 26px;
+}
+
+.fa-facebook {
+  color: #3B5998;
+}
+
+.fa-twitter {
+  color: #08A0E9;
+  color: #08A0E9;
+}
+
+.fa-linkedin {
+  color: #0077B5;
+}
+
 
 .red-stroke {
   stroke: #dbb023;
@@ -1141,6 +1164,12 @@ a:hover {
 
 #black-text {
 
+}
+
+/* Minor tweaks */
+
+.fa-twitter::before {
+  margin: 0 0 0 -5px;
 }
 
 
