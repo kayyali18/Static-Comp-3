@@ -755,7 +755,7 @@ a:hover {
     grid-area: search;
   }
 
-  main.hide-for-desktop {
+  .hide-for-desktop {
     display: grid;
     grid-template-columns: 150px repeat(2, minmax(100px, 1fr));
     grid-template-rows: 150px 550px 300px repeat(2, 1fr);
@@ -800,7 +800,6 @@ a:hover {
 
   .hot-links {
     align-items: stretch;
-
     grid-area: hot-links;
     display: flex;
     flex-direction: column;
@@ -917,7 +916,7 @@ a:hover {
 
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 590px) {
 
   .hide-for-desktop {
     display: contents;
@@ -975,6 +974,7 @@ a:hover {
       display: block;
       text-align: center;
       text-transform: uppercase;
+      height: 100%;
     }
 
     section.data {
@@ -1004,8 +1004,22 @@ a:hover {
 
   /*---------------------------*/
 
+  .menu-wrap {
+    width: 205px;
+  }
+
+  .slide-right {
+    margin-left: 205px;
+    overflow: hidden;
+  }
+
   .actions {
     border: none;
+  }
+
+  .social-btns button {
+    margin: 10px auto;
+    width: 60%;
   }
 
   .hot-links a {
@@ -1056,6 +1070,21 @@ a:hover {
 
   }
 
+  .btns-tablet {
+    height: auto;
+    padding: 0;
+    width: auto;
+  }
+
+  #graph-btn {
+    display: block;
+    margin: 1rem auto;
+  }
+
+  #circle-btn {
+    margin: 1rem auto;
+  }
+
 
   .hot-links a:hover {
     color: #040404;
@@ -1079,7 +1108,6 @@ a:hover {
   }
 
   .graph {
-    height: 400px;
     justify-content: normal;
     text-align: center;
   }
