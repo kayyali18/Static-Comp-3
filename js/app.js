@@ -9,8 +9,11 @@ $(document).ready(function() {
     $headerWrap.toggleClass('slide-right');
   });
 
-  var $sidebarArrow = $('.sidebar-menu-arrow');
-    $sidebarArrow.click(function() {
-        $(this).next().slideToggle(300);
+  var $hotLinks = $('.hot-links.mobile a');
+    $hotLinks.on('click', function(e) {
+      e.preventDefault();
+      $(this).toggleClass('active');
+      $(this).siblings('.active').toggleClass('active');
+      console.log('hi')
     });
 });
